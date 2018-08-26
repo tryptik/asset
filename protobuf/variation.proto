@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/struct.proto";
+
+message Definition {
+
+    message GeometryVariation {
+        string name = 1;
+        google.protobuf.Struct data = 2;
+    }
+
+    message GeometryVariationGroup {
+        string name = 1;
+        repeated GeometryVariation children = 2;
+    }
+
+
+    message ComponentVariation {
+        string name = 1;
+        string product = 2;
+        google.protobuf.Struct data = 3;
+    }
+
+    message ComponentVariationGroup {
+        
+    }
+
+
+    message Group {
+        string name = 1;
+
+        repeated Variation children = 2;
+    }
+
+    repeated Group children = 1;
+}
