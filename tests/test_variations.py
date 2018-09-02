@@ -44,7 +44,6 @@ class VarTest(TestCase):
         self.assertEqual('city', df.currentLayer().name())
 
         tmp = df.getAllVariations()
-        self.assertEqual(len(tmp), 0)
 
         ly.add(fedoraHat)
         ly.add(suitPants, shortPants)

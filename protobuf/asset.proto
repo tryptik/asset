@@ -2,21 +2,39 @@ syntax = "proto3";
 
 import "google/protobuf/struct.proto";
 
+
 message AssetPB {
 
-    message Input {
-        string type = 1;
-        string name = 2;
-        google.protobuf.Struct  data = 3;
+    string id = 1;
+    string type = 2;
+    repeated string inputs = 3;
+    repeated AssetPB children = 4;
+    map <string, AttrValue> attrs = 5;
+    google.protobuf.Struct data = 6;
+}
+
+message Attributes
+{
+    map <string, AttrValue> fields = 1;
+}
+
+message IntArray {
+    repeated int32 data = 1 [packed = true];
+}
+
+message DoubleArray {
+    repeated double data = 1 [packed = true];
+}
+
+message StringArray {
+    repeated string data = 1;
+}
+
+message AttrValue
+{
+    oneof kind {
+        IntArray int_value = 1;
+        DoubleArray double_value = 2;
+        StringArray string_value = 3;
     }
-
-    message Block {
-        string type = 1;
-        google.protobuf.Struct data = 2;
-    }
-
-    string type = 1;
-    repeated Input inputs = 2;
-    repeated Block assets = 3;
-
 }

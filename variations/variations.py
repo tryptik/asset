@@ -51,12 +51,12 @@ class Base(Item):
         vis.visit(self)
         return vis.buf.getvalue()
 
-    def childIter(self, recursive=False, inclusive=False):
-        root = self.root()
-        cl = root.currentLayer()
-        for ch in super(Base, self).childIter(recursive, inclusive):
-            if ch in cl:
-                yield ch
+    # def childIter(self, recursive=False, inclusive=False):
+    #     root = self.root()
+    #     cl = root.currentLayer()
+    #     for ch in super(Base, self).childIter(recursive, inclusive):
+    #         if ch in cl:
+    #             yield ch
 
     def childByName(self, name):
         for ch in self.childIter():

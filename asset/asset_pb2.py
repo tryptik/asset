@@ -20,36 +20,300 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0b\x61sset.proto\x1a\x1cgoogle/protobuf/struct.proto\"\xe1\x01\n\x07\x41ssetPB\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x1e\n\x06inputs\x18\x02 \x03(\x0b\x32\x0e.AssetPB.Input\x12\x1e\n\x06\x61ssets\x18\x03 \x03(\x0b\x32\x0e.AssetPB.Block\x1aJ\n\x05Input\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12%\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x17.google.protobuf.Struct\x1a<\n\x05\x42lock\x12\x0c\n\x04type\x18\x01 \x01(\t\x12%\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Structb\x06proto3')
+  serialized_pb=_b('\n\x0b\x61sset.proto\x1a\x1cgoogle/protobuf/struct.proto\"\xd4\x01\n\x07\x41ssetPB\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0e\n\x06inputs\x18\x03 \x03(\t\x12\x1a\n\x08\x63hildren\x18\x04 \x03(\x0b\x32\x08.AssetPB\x12\"\n\x05\x61ttrs\x18\x05 \x03(\x0b\x32\x13.AssetPB.AttrsEntry\x12%\n\x04\x64\x61ta\x18\x06 \x01(\x0b\x32\x17.google.protobuf.Struct\x1a\x38\n\nAttrsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x19\n\x05value\x18\x02 \x01(\x0b\x32\n.AttrValue:\x02\x38\x01\"p\n\nAttributes\x12\'\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x17.Attributes.FieldsEntry\x1a\x39\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x19\n\x05value\x18\x02 \x01(\x0b\x32\n.AttrValue:\x02\x38\x01\"\x1c\n\x08IntArray\x12\x10\n\x04\x64\x61ta\x18\x01 \x03(\x05\x42\x02\x10\x01\"\x1f\n\x0b\x44oubleArray\x12\x10\n\x04\x64\x61ta\x18\x01 \x03(\x01\x42\x02\x10\x01\"\x1b\n\x0bStringArray\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\t\"\x7f\n\tAttrValue\x12\x1e\n\tint_value\x18\x01 \x01(\x0b\x32\t.IntArrayH\x00\x12$\n\x0c\x64ouble_value\x18\x02 \x01(\x0b\x32\x0c.DoubleArrayH\x00\x12$\n\x0cstring_value\x18\x03 \x01(\x0b\x32\x0c.StringArrayH\x00\x42\x06\n\x04kindb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 
 
 
 
-_ASSETPB_INPUT = _descriptor.Descriptor(
-  name='Input',
-  full_name='AssetPB.Input',
+_ASSETPB_ATTRSENTRY = _descriptor.Descriptor(
+  name='AttrsEntry',
+  full_name='AssetPB.AttrsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='AssetPB.Input.type', index=0,
+      name='key', full_name='AssetPB.AttrsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='AssetPB.Input.name', index=1,
+      name='value', full_name='AssetPB.AttrsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=202,
+  serialized_end=258,
+)
+
+_ASSETPB = _descriptor.Descriptor(
+  name='AssetPB',
+  full_name='AssetPB',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='AssetPB.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='AssetPB.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='AssetPB.Input.data', index=2,
+      name='inputs', full_name='AssetPB.inputs', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='children', full_name='AssetPB.children', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='attrs', full_name='AssetPB.attrs', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='AssetPB.data', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_ASSETPB_ATTRSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=46,
+  serialized_end=258,
+)
+
+
+_ATTRIBUTES_FIELDSENTRY = _descriptor.Descriptor(
+  name='FieldsEntry',
+  full_name='Attributes.FieldsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='Attributes.FieldsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='Attributes.FieldsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=315,
+  serialized_end=372,
+)
+
+_ATTRIBUTES = _descriptor.Descriptor(
+  name='Attributes',
+  full_name='Attributes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='fields', full_name='Attributes.fields', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_ATTRIBUTES_FIELDSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=260,
+  serialized_end=372,
+)
+
+
+_INTARRAY = _descriptor.Descriptor(
+  name='IntArray',
+  full_name='IntArray',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='IntArray.data', index=0,
+      number=1, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\020\001'), file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=374,
+  serialized_end=402,
+)
+
+
+_DOUBLEARRAY = _descriptor.Descriptor(
+  name='DoubleArray',
+  full_name='DoubleArray',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='DoubleArray.data', index=0,
+      number=1, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\020\001'), file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=404,
+  serialized_end=435,
+)
+
+
+_STRINGARRAY = _descriptor.Descriptor(
+  name='StringArray',
+  full_name='StringArray',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='StringArray.data', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=437,
+  serialized_end=464,
+)
+
+
+_ATTRVALUE = _descriptor.Descriptor(
+  name='AttrValue',
+  full_name='AttrValue',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='int_value', full_name='AttrValue.int_value', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='double_value', full_name='AttrValue.double_value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='string_value', full_name='AttrValue.string_value', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -66,114 +330,48 @@ _ASSETPB_INPUT = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='kind', full_name='AttrValue.kind',
+      index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=135,
-  serialized_end=209,
+  serialized_start=466,
+  serialized_end=593,
 )
 
-_ASSETPB_BLOCK = _descriptor.Descriptor(
-  name='Block',
-  full_name='AssetPB.Block',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='AssetPB.Block.type', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='data', full_name='AssetPB.Block.data', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=211,
-  serialized_end=271,
-)
-
-_ASSETPB = _descriptor.Descriptor(
-  name='AssetPB',
-  full_name='AssetPB',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='AssetPB.type', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='inputs', full_name='AssetPB.inputs', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='assets', full_name='AssetPB.assets', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_ASSETPB_INPUT, _ASSETPB_BLOCK, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=46,
-  serialized_end=271,
-)
-
-_ASSETPB_INPUT.fields_by_name['data'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
-_ASSETPB_INPUT.containing_type = _ASSETPB
-_ASSETPB_BLOCK.fields_by_name['data'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
-_ASSETPB_BLOCK.containing_type = _ASSETPB
-_ASSETPB.fields_by_name['inputs'].message_type = _ASSETPB_INPUT
-_ASSETPB.fields_by_name['assets'].message_type = _ASSETPB_BLOCK
+_ASSETPB_ATTRSENTRY.fields_by_name['value'].message_type = _ATTRVALUE
+_ASSETPB_ATTRSENTRY.containing_type = _ASSETPB
+_ASSETPB.fields_by_name['children'].message_type = _ASSETPB
+_ASSETPB.fields_by_name['attrs'].message_type = _ASSETPB_ATTRSENTRY
+_ASSETPB.fields_by_name['data'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
+_ATTRIBUTES_FIELDSENTRY.fields_by_name['value'].message_type = _ATTRVALUE
+_ATTRIBUTES_FIELDSENTRY.containing_type = _ATTRIBUTES
+_ATTRIBUTES.fields_by_name['fields'].message_type = _ATTRIBUTES_FIELDSENTRY
+_ATTRVALUE.fields_by_name['int_value'].message_type = _INTARRAY
+_ATTRVALUE.fields_by_name['double_value'].message_type = _DOUBLEARRAY
+_ATTRVALUE.fields_by_name['string_value'].message_type = _STRINGARRAY
+_ATTRVALUE.oneofs_by_name['kind'].fields.append(
+  _ATTRVALUE.fields_by_name['int_value'])
+_ATTRVALUE.fields_by_name['int_value'].containing_oneof = _ATTRVALUE.oneofs_by_name['kind']
+_ATTRVALUE.oneofs_by_name['kind'].fields.append(
+  _ATTRVALUE.fields_by_name['double_value'])
+_ATTRVALUE.fields_by_name['double_value'].containing_oneof = _ATTRVALUE.oneofs_by_name['kind']
+_ATTRVALUE.oneofs_by_name['kind'].fields.append(
+  _ATTRVALUE.fields_by_name['string_value'])
+_ATTRVALUE.fields_by_name['string_value'].containing_oneof = _ATTRVALUE.oneofs_by_name['kind']
 DESCRIPTOR.message_types_by_name['AssetPB'] = _ASSETPB
+DESCRIPTOR.message_types_by_name['Attributes'] = _ATTRIBUTES
+DESCRIPTOR.message_types_by_name['IntArray'] = _INTARRAY
+DESCRIPTOR.message_types_by_name['DoubleArray'] = _DOUBLEARRAY
+DESCRIPTOR.message_types_by_name['StringArray'] = _STRINGARRAY
+DESCRIPTOR.message_types_by_name['AttrValue'] = _ATTRVALUE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AssetPB = _reflection.GeneratedProtocolMessageType('AssetPB', (_message.Message,), dict(
 
-  Input = _reflection.GeneratedProtocolMessageType('Input', (_message.Message,), dict(
-    DESCRIPTOR = _ASSETPB_INPUT,
+  AttrsEntry = _reflection.GeneratedProtocolMessageType('AttrsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ASSETPB_ATTRSENTRY,
     __module__ = 'asset_pb2'
-    # @@protoc_insertion_point(class_scope:AssetPB.Input)
-    ))
-  ,
-
-  Block = _reflection.GeneratedProtocolMessageType('Block', (_message.Message,), dict(
-    DESCRIPTOR = _ASSETPB_BLOCK,
-    __module__ = 'asset_pb2'
-    # @@protoc_insertion_point(class_scope:AssetPB.Block)
+    # @@protoc_insertion_point(class_scope:AssetPB.AttrsEntry)
     ))
   ,
   DESCRIPTOR = _ASSETPB,
@@ -181,8 +379,54 @@ AssetPB = _reflection.GeneratedProtocolMessageType('AssetPB', (_message.Message,
   # @@protoc_insertion_point(class_scope:AssetPB)
   ))
 _sym_db.RegisterMessage(AssetPB)
-_sym_db.RegisterMessage(AssetPB.Input)
-_sym_db.RegisterMessage(AssetPB.Block)
+_sym_db.RegisterMessage(AssetPB.AttrsEntry)
+
+Attributes = _reflection.GeneratedProtocolMessageType('Attributes', (_message.Message,), dict(
+
+  FieldsEntry = _reflection.GeneratedProtocolMessageType('FieldsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ATTRIBUTES_FIELDSENTRY,
+    __module__ = 'asset_pb2'
+    # @@protoc_insertion_point(class_scope:Attributes.FieldsEntry)
+    ))
+  ,
+  DESCRIPTOR = _ATTRIBUTES,
+  __module__ = 'asset_pb2'
+  # @@protoc_insertion_point(class_scope:Attributes)
+  ))
+_sym_db.RegisterMessage(Attributes)
+_sym_db.RegisterMessage(Attributes.FieldsEntry)
+
+IntArray = _reflection.GeneratedProtocolMessageType('IntArray', (_message.Message,), dict(
+  DESCRIPTOR = _INTARRAY,
+  __module__ = 'asset_pb2'
+  # @@protoc_insertion_point(class_scope:IntArray)
+  ))
+_sym_db.RegisterMessage(IntArray)
+
+DoubleArray = _reflection.GeneratedProtocolMessageType('DoubleArray', (_message.Message,), dict(
+  DESCRIPTOR = _DOUBLEARRAY,
+  __module__ = 'asset_pb2'
+  # @@protoc_insertion_point(class_scope:DoubleArray)
+  ))
+_sym_db.RegisterMessage(DoubleArray)
+
+StringArray = _reflection.GeneratedProtocolMessageType('StringArray', (_message.Message,), dict(
+  DESCRIPTOR = _STRINGARRAY,
+  __module__ = 'asset_pb2'
+  # @@protoc_insertion_point(class_scope:StringArray)
+  ))
+_sym_db.RegisterMessage(StringArray)
+
+AttrValue = _reflection.GeneratedProtocolMessageType('AttrValue', (_message.Message,), dict(
+  DESCRIPTOR = _ATTRVALUE,
+  __module__ = 'asset_pb2'
+  # @@protoc_insertion_point(class_scope:AttrValue)
+  ))
+_sym_db.RegisterMessage(AttrValue)
 
 
+_ASSETPB_ATTRSENTRY._options = None
+_ATTRIBUTES_FIELDSENTRY._options = None
+_INTARRAY.fields_by_name['data']._options = None
+_DOUBLEARRAY.fields_by_name['data']._options = None
 # @@protoc_insertion_point(module_scope)
