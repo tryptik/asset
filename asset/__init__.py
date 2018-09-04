@@ -1,6 +1,6 @@
 import logging
 
-from .asset_pb2 import AssetPB
+from .jsonobj import JsonObj
 from .asset import Asset
 
 logging.basicConfig()
